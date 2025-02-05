@@ -1,6 +1,6 @@
 const add = require("./stringCalculator");
 
-test("supports custom delimiter defined in format //;\n1;2", () => {
-    expect(add("//;\n1;2")).toBe(3);
+test("throws exception for negative numbers", () => {
+    expect(() => add("1,-2,3,-4")).toThrow("Negative numbers not allowed: -2, -4");
   });
   

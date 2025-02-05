@@ -1,6 +1,8 @@
-test("returns the number itself if only one number is provided", () => {
-    expect(add("1")).toBe(1);
-  });
+function add(numbers) {
+    if (numbers === "") return 0;
+    const numArray = numbers.split(",").map(Number);
+    return numArray.reduce((sum, num) => sum + num, 0);
+  }
   
   module.exports = add;
   
